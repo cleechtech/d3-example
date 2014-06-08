@@ -1,8 +1,3 @@
-d3-example
-==========
-
-## Notes
-
 // for every time that we see data but do not see an element
 .enter()
 
