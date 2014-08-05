@@ -16,18 +16,26 @@
 		<li><a href='./barchart.html'>Barchart</a></li>
 		<li><a href='./linechart.html'>Linechart</a></li>
 		<li><a href='./donut.html'>Donut</a></li>
-		<li class='active'><a href='./grid.html'>Grid</a></li>
-		<li><a href='./tree.html'>Tree</a></li>
+		<li><a href='./grid.html'>Grid</a></li>
+		<li class='active'><a href='./tree.html'>Tree</a></li>
 	</ul>
 
-	<div class='row text-center'>
-		<div id='grid'></div>
+	<!-- basic shapes -->
+	<div class='row'>
+		<div class='col-md-4'>
+			<h3>Diagonal path generator</h3>
+			<div id='line'></div>
+		</div>
+		<div class='col-md-8'>
+			<h3>Tree diagram</h3>
+			<div id='tree'></div>
+		</div>
 	</div>
 
 	<script src='js/jquery-1.10.2.js'></script>
 	<script src="js/d3.js"></script>
 
-	<script src='js/grid.js'></script>
-	<script src='js/battleships.js'></script>
+	<script src="data/peopleTree.js"></script>
+	<script src='js/tree.js'></script>
 </body>
 </html>
