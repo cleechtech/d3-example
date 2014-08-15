@@ -1,16 +1,61 @@
-var canvas1 = d3.select('#line').append('svg')
-	.attr('width', 300)
-	.attr('height', 300);
+var radius = window.innerHeight;
 
-// diagonal path generator
-var diagonal = d3.svg.diagonal()
-	.source({x: 10, y: 10})
-	.target({x: 300, y: 250 })
+var svg = d3.select('#tree1').append('svg')
+	.attr({
+		width: window.innerWidth,
+		height: window.innerHeight
+	}).append('g')
+	.attr('transform', 'translate(' + [60, radius/2] + ')rotate(60)')
 
-canvas1.append('path')
-	.attr('fill', 'none')
-	.attr('stroke', 'black')
-	.attr('d', diagonal);
+var tree = d3.layout.tree().size([60, radius]);
+
+var diagonal =  d3.svg.diagonal.radial()
+	.projection(function(d){
+		return [d.y, d.x / 180 * Math.PI]
+	})
+
+d3.json('./data/tree.json', function(data){
+	var nodeData = tree.nodes(data),
+		linkData = tree.links(nodeData);
+
+		svg.selectAll('path.link')
+			.data(linkData)
+			.enter()
+				.append('path')
+				.attr({
+					'class': 'link',
+					fill: 'none',
+					stroke: '#ccc',
+					d: diagonal
+				});
+
+		var nodes = svg.selectAll('g.node')
+			.data(nodeData)
+			.enter()
+				.append('g')
+				.attr({
+					'class': 'node',
+					'transform': function(d){
+						return 'rotate(' + (d.x - 90) + ')translate(' + d.y + ')'
+					}
+				});
+
+		nodes.append('circle')
+			.attr({
+				fill: '#fff',
+				stroke: '#78B446',
+				'stroke-width': 4,
+				r: 4
+			})
+
+		nodes.append('text')
+			.attr('dx', 10)
+			.text(function(d){
+				return d.name
+			})
+
+
+})
 
 //==================================//
 
@@ -24,7 +69,7 @@ var canvas2 = d3.select('#tree').append('svg')
 var tree = d3.layout.tree()
 	.size([500, 500])
 
-d3.json('mydata.json', function(data){
+d3.json('data/peopleTree.json', function(data){
 	var nodes = tree.nodes(data)	// returns all objects in data as array
 	// console.log(nodes)
 
@@ -65,8 +110,3 @@ d3.json('mydata.json', function(data){
 
 
 })
-
-
-
-
-

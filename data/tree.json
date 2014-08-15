@@ -1,0 +1,47 @@
+{
+  "name": "West Germanic Languages",
+  "children": [
+    {
+      "name": "Ingvaeonic",
+      "children": [
+        {
+          "name": "Old English",
+          "children": [
+            {
+              "name": "Middle English",
+              "children": [
+                {
+                  "name": "English"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Old Fristan",
+          "children": [ { "name": "Fristan"} ]
+        },
+        {
+          "name": "Old Saxon",
+          "children": [
+            {
+              "name": "Middle Low German",
+              "children": [ { "name": "Low German" } ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Istvaeonic",
+      "children": [
+        {
+          "name": "Dutch"
+        },
+        {
+          "name": "Afrikaans"
+        }
+      ]
+    }
+  ]
+}
