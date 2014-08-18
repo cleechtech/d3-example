@@ -21,7 +21,7 @@ var arc = d3.svg.arc()
 	.outerRadius(radius - 20);
 
 // append svg
-var svg = d3.select('#target').append('svg')
+var svg = d3.select('.donutTarget').append('svg')
 	.attr('width', width)
 	.attr('height', height)
 	// creates group

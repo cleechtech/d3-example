@@ -6,7 +6,7 @@ var svg = d3.select('.shapeCreation').append('svg')
 
 var parse = d3.time.format('%Y').parse;
 
-d3.csv('./tutsplus.csv', function(d){
+d3.csv('./data/tutsplus.csv', function(d){
   // parse string into date object
   d.year = parse(d.year);
 

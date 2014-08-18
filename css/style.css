@@ -11,3 +11,32 @@ div.bars {
 .bgcolor {
 	background-color: #FFD39B;
 }
+
+/*  Linechart styles */
+
+.axis path, .axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.x.axis path {
+	display: none;
+}
+
+.line {
+	fill: none;
+	stroke: steelblue;
+	stroke-width: 1.5px;
+}
+	
+/* Shape Creation */
+.axis {
+font-color: #474747;
+}
+
+.axis path, .axis line {
+fill: none;
+stroke: #474747;
+shape-rendering: crispEdges;
+}

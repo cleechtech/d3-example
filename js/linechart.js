@@ -21,7 +21,7 @@ var line = d3.svg.line()
 	.x(function(d){ return x(d.date) })
 	.y(function(d){ return y(d.close) })
 
-var svg = d3.select("body").append('svg')
+var svg = d3.select(".linechartTarget").append('svg')
 	.attr("width", width + margin.left + margin.right)
 	.attr("height", height + margin.top + margin.bottom)
 		.append("g")
@@ -32,10 +32,10 @@ d3.tsv('data/linechart.tsv', function(error, data){
 	data.forEach(function(d){
 		d.date = parseDate(d.date)
 		d.close = +d.close
-	})
+	});
 
-	x.domain(d3.extent(data, function(d){ return d.date }))
-	y.domain(d3.extent(data, function(d){ return d.close }))
+	x.domain(d3.extent(data, function(d){ return d.date }));
+	// y.domain(d3.extent(data, function(d){ return d.close }));
 
 	svg.append('g')
 		.attr('class', 'x axis')

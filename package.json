@@ -1,0 +1,25 @@
+{
+  "name": "d3-example",
+  "version": "0.0.0",
+  "description": "d3-example ==========",
+  "main": "Notes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonshark/d3-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonshark/d3-example/issues"
+  },
+  "homepage": "https://github.com/jasonshark/d3-example",
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-connect": "^2.0.6",
+    "gulp-inject": "^1.0.1",
+    "main-bower-files": "^1.0.2"
+  }
+}

@@ -5,11 +5,11 @@ for(var y=0; y<10; y++) {
     mainData[y] = [ [y, 0], [y, 1], [y, 2], [y, 3], [y, 4], [y, 5], [y, 6], [y, 7], [y, 8], [y, 9] ];
 }
 
-var id = '#grid',
+var target = '.gridTarget',
 	width = 500,
 	height = 500;
 
-var grid = d3.select(id).append("svg")
+var grid = d3.select(target).append("svg")
 	.attr("width", width)
 	.attr("height", height);
 
