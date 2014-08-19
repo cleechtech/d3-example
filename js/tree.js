@@ -104,9 +104,5 @@ d3.json('data/peopleTree.json', function(data){
 			.attr('class', 'link')
 			.attr('fill', 'none')
 			.attr('stroke', '#ADADAD')
-			.attr('d', diagonal)
-
-
-
-
+			.attr('d', diagonal);
 })
